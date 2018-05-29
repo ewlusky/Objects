@@ -47,14 +47,14 @@ let Liz = new Candidate("Elizabeth");
 Liz.district = "home town";
 let Lplat = {taxes: "Yes, taxes.", jobs: "I am pro jobs.", 
             infra: "Infrawhat now?  That's tommorow's problem and I am the candidate of today.",
-            health: "More apples, less doctors", crime: "I strongly believe that crime is bad"};
+            health: "More apples, less doctors.", crime: "I strongly believe that crime is bad."};
 
 Liz.platform = Lplat;
 const main = document.querySelector("#main");
 const art = document.createElement("article");
 art.setAttribute("id", Liz.district);
 for (key in Lplat) {
-    console.log(key);
+    //console.log(key);
     art.appendChild(document.createTextNode(key.toUpperCase() + ": " + Lplat[key]));
     art.appendChild(document.createElement("br"));
 }
